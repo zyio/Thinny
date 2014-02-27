@@ -161,7 +161,7 @@ img.site-icon-page {
 #article {
 	font-family: "PT Serif", Georgia, "Times New Roman", serif;
 	font-weight: 400;
-	letter-spacing: -0.4px;
+	letter-spacing: 0px;
 	font-size:20px;
 	color: #313131;
 	line-height: 1.5;
@@ -178,7 +178,8 @@ a.site-title:hover, .copyright a:hover {
 
 table {
 	width: 100%;
-	border: 1px solid #e5e5e5;
+	max-width: 100%;
+	border: 0px;
 	border-collapse: collapse;
 }
 
@@ -351,7 +352,8 @@ pre code {
 
 .menu-content a {
 	text-transform: uppercase;
-	font-size: 15px;
+	font-size: 11pt;
+	letter-spacing: 0.7pt;
 	font-weight: bold;
 	line-height: 26px;
 }
@@ -441,8 +443,8 @@ pre code {
 	top: 50px;
 	padding-bottom: 80px;
 	font-weight: 400;
-	letter-spacing: -0.4px;
-	font-size:20px;
+	letter-spacing: 0px;
+	font-size: 20pt;
 	color: #313131;
 	line-height: 1.5;
 	position: relative;
@@ -450,9 +452,9 @@ pre code {
 
 #post-list h1 {
 	font-weight: bold;
-	font-size: 40px;
+	font-size: 30pt;
 	line-height: 44px;
-	margin-top: 8px;
+	margin-top: 0px;
 	margin-bottom: 8px;
 }
 
@@ -469,11 +471,11 @@ pre code {
 
 .post-description {
 	color: #777;
-	font-size: 20px;
+	font-size: 15pt;
 	font-family: "PT Serif", Georgia, "Times New Roman", serif;
 }
 
 .post-date {
-	font-size: 16px;
+	font-size: 12pt;
 	color: #999;
 }

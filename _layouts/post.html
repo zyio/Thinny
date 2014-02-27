@@ -10,7 +10,6 @@ article: true
 			{% if page.video_ogv %}<source src="{{ page.video_ogv }}" type="video/ogg ogv">{% endif %}
 			{% if page.video_mp4 %}<source src="{{ page.video_mp4 }}" type="video/mp4">{% endif %}
 		</video>
-		{% if page.video_pattern %}<div id="bg-video-pattern"></div>{% endif %}
 	{% endif %}
 	{% include top.html %}
 	<div id="post-info">
@@ -27,13 +26,13 @@ article: true
 <div id="article">
 	{{ content }}
 </div>
+{% for post in site.related_posts limit:1 %}
 <footer class="{% if post.dark %}dark{% else %}clean{% endif %}" style="background-image: url({% if post.image %}{{ post.image }}{% else %}{{ site.cover }}{% endif %});{% if post.background_position %} background-position: {{ post.background_position }};{% endif %}height: 75%; min-height: 500px;">
 	<div id="nav-icon" style="top: 25px;">
 		<a class="scroll" data-speed="1000" href="#article"><span class="genericon genericon-collapse"></span></a>
 	</div>
-	{% for post in site.related_posts limit:1 %}
 	<div id="post-info">
-		<h3>Em destaque</h3>
+		<h3>Featured post</h3>
 		<a href="{{ post.url }}">
 			<h1>{{ post.title }}</h1>
 			{% if post.quote %}
@@ -41,9 +40,7 @@ article: true
 			{% endif %}
 		</a>
 	</div>
-	{% endfor %}
 	<p class="copyright">&copy;{{ site.time | date: "%Y" }}, <a href="{{ site.copyright.url }}" target="_blank">{{ site.copyright.author }}</a>. <a href="{{ site.copyright.type_url }}" target="_blank">{{ site.copyright.type_title }}</a>.</p>
 </footer>
+{% endfor %}
 <script src="/assets/js/smooth-scroll.js"></script>
-  </ul>
-</div>
