@@ -168,8 +168,16 @@ img.site-icon-page {
 	position: relative;
 }
 
-#article a:hover, .copyright a:hover {
-	text-decoration: underline;
+#article a {
+	border-bottom: 2px solid #fff;
+	-webkit-transition: 0.5s ease;
+	transition: 0.5s ease;
+}
+
+#article a:hover {
+	border-bottom: 2px solid #2a7ead;
+	-webkit-transition: 0.5s ease;
+	transition: 0.5s ease;
 }
 
 a.site-title:hover, .copyright a:hover {
@@ -177,10 +185,10 @@ a.site-title:hover, .copyright a:hover {
 }
 
 table {
-	width: 100%;
-	max-width: 100%;
 	border: 0px;
 	border-collapse: collapse;
+	display: block;
+	overflow: auto;
 }
 
 td, th {
