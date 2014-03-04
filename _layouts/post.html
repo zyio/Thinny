@@ -25,10 +25,12 @@ article: true
 </header>
 <div id="article">
 	{{ content }}
-	{% if page.comments %}
-		{% include comments.html %}
-	{% endif %}
 </div>
+{% if page.comments %}
+<div id="comments">
+	{% include comments.html %}
+</div>
+{% endif %}
 {% for post in site.related_posts limit:1 %}
 <footer class="{% if post.dark %}dark{% else %}clean{% endif %}" style="background-image: url({% if post.image %}{{ post.image }}{% else %}{{ site.cover }}{% endif %});{% if post.background_position %} background-position: {{ post.background_position }};{% endif %}height: 75%; min-height: 500px;">
 	<div id="nav-icon" style="top: 25px;">

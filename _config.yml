@@ -10,6 +10,8 @@ title:		Thinny
 tagline:	'blog'
 description:	'My personal blog.'
 url:		http://camporez.com
+commentsystem:	disqus
+disqus:		example
 
 author:
   name:		'Ian Camporez Brunelli'
