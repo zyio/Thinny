@@ -44,7 +44,7 @@ h2 {
 }
 
 .menu {
-	background-color: rgba(119, 119, 119, 1);
+	/*background-color: rgba(0, 0, 0, 0.25);*/
 	position: absolute;
 }
 
