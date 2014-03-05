@@ -10,7 +10,7 @@ title:		Thinny
 tagline:	'blog'
 description:	'My personal blog.'
 url:		http://camporez.com
-commentsystem:	google
+commentsystem:	disqus
 disqus:		example
 
 author:
