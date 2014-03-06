@@ -133,32 +133,6 @@
 
 		});
 
-		// For each footnote link
-		var fnToggle = document.querySelectorAll('.footnote');
-		[].forEach.call(fnToggle, function (toggle) {
-
-			// When the smooth scroll link is clicked
-			toggle.addEventListener('click', function(e) {
-
-				// Prevent the default link behavior
-				e.preventDefault();
-
-				// Get anchor link and calculate distance from the top
-				var dataID = toggle.getAttribute('href');
-				var dataTarget = document.querySelector(dataID);
-				var dataSpeed = toggle.getAttribute('data-speed');
-				var dataEasing = toggle.getAttribute('data-easing');
-				var dataURL = toggle.getAttribute('data-url');
-
-				// If the anchor exists, scroll to it
-				if (dataTarget) {
-					smoothScroll( dataTarget, dataSpeed || 500, dataEasing || 'easeInOutCubic', dataURL || 'false' );
-				}
-
-			}, false);
-
-		});
-
 	}
 
 })();
