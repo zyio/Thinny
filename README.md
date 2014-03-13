@@ -3,7 +3,7 @@
 
 ----
 
-###Atention: We need a "share to social networks" functionality.
+###Attention: We need a "share to social networks" functionality.
 Do you have any idea of how we should implement this?
 Please, [let me know](http://github.com/camporez/camporez.github.io/issues/11)!
 
