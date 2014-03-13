@@ -1,14 +1,18 @@
 #Thinny - The Infinite's Nymphet
 
-===
+
+----
+
 ###Atention: We need a "share to social networks" functionality.
 Do you have any idea of how we should implement this?
 Please, [let me know](http://github.com/camporez/camporez.github.io/issues/11)!
+
 My thougths are:
 - the "share to social networks" just need to be visible on desktop, because mobile browsers already has this.
 - it needs to be easy accessible by the end of the article.
 If you have some idea, leave a comment [on the issue](http://github.com/camporez/camporez.github.io/issues/11).
-===
+
+----
 
 ##About
 Thinny is a beautiful theme for [Jekyll](http://jekyllrb.com/).
