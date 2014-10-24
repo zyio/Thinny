@@ -13,6 +13,11 @@ My thougths are:
 If you have some idea, leave a comment [on the issue](http://github.com/camporez/camporez.github.io/issues/11).
 
 ----
+##Installation
+1. Clone the repo: `git clone https://github.com/camporez/Thinny.git`
+2. Open the folder: `cd Thinny`
+3. Install the dependencies: `bundle install`
+4. Build the website: `bundle exec jekyll serve`
 
 ##About
 Thinny is a beautiful theme for [Jekyll](http://jekyllrb.com/).
