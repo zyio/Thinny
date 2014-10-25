@@ -3,18 +3,16 @@
 
 ----
 
-###Attention: We need a "share to social networks" functionality.
-Do you have any idea of how we should implement this?
-Please, [let me know](http://github.com/camporez/camporez.github.io/issues/11)!
+###Attention
 
-My thougths are:
-- the "share to social networks" just need to be visible on desktop, because mobile browsers already has this.
-- it needs to be easy accessible by the end of the article.
-If you have some idea, leave a comment [on the issue](http://github.com/camporez/camporez.github.io/issues/11).
+I'm no longer maintaining Thinny, at least not until I've time to work on it again.
+
+If you want to add something, feel free to send a pull request, which I'll see if it's okay and merge. Or you can [report an issue](http://github.com/camporez/camporez.github.io/issues) and pray.
 
 ----
+
 ##Installation
-1. Clone the repo: `git clone https://github.com/camporez/Thinny.git`
+1. Clone the repo: `git clone https://github.com/camporez/Thinny.git Thinny`
 2. Open the folder: `cd Thinny`
 3. Install the dependencies: `bundle install`
 4. Build the website: `bundle exec jekyll serve`
