@@ -3,7 +3,7 @@ layout: default
 article: true
 ---
 
-<header class="{% if page.dark %}dark{% else %}clean{% endif %}" style="background-image: url({% if page.image %}{{ site.baseurl }}{{ page.image }}{% else %}{{ site.cover }}{% endif %}); height: 100%;" data-stellar-background-ratio="0.5" data-stellar-horizontal-offset="50">
+<header class="{% if page.dark %}dark{% else %}clean{% endif %}" style="background-image: url({% if page.image.url %}{{ page.image.url }}{% else %}{{ site.cover }}{% endif %}); height: 100%;" data-stellar-background-ratio="0.5" data-stellar-horizontal-offset="50">
 	{% if page.video %}
 		<video id="bg-video" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0" data-stellar-ratio="0.5">
 		{% for format in page.video %}
@@ -19,6 +19,11 @@ article: true
 		{% endif %}
 		<a class="site-title" href="{{ site.url }}{{ site.baseurl }}"><div class="site-icon-small" style="background-image: url({{ site.icon }});"></div>{{ site.title }}</a>, in {{ page.date | date_to_long_string }}
 	</div>
+	{% if page.image.source %}
+	<div id="img-info" data-stellar-ratio="0.5">
+		<a href="{{ page.image.source }}" target="_blank" title="Fonte {% if page.video %}do vídeo{% else %}da imagem{% endif %}"><span class="genericon genericon-link"></span></a>
+	</div>
+	{% endif %}
 	<div id="nav-icon" style="bottom: 30px;" data-stellar-ratio="4">
 		<a class="scroll" data-speed="500" href="#article"><span class="genericon genericon-expand"></span></a>
 	</div>
