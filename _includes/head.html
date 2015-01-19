@@ -38,4 +38,6 @@
 		ga('send', 'pageview');
 	</script>
 	{% endif %}
+	<!-- Theme Color for Chrome on Android Lollipop -->
+	<meta name="theme-color" content="#{% if page.theme_color %}{{ page.theme_color }}{% else %}{{ site.theme_color }}{% endif %}">
 </head>
