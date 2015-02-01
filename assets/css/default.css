@@ -365,7 +365,7 @@ pre code {
 
 .menu a:hover {
 	-webkit-opacity: 0.75;
-	        opacity: 0.75;
+	opacity: 0.75;
 }
 
 .menu {
@@ -403,9 +403,9 @@ pre code {
 .menu-content a {
 	text-transform: uppercase;
 	-moz-osx-font-smoothing: antialiased;
-	 -webkit-font-smoothing: antialiased;
-	         font-smoothing: antialiased;
-	
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+
 	letter-spacing: 1.2pt;
 	font-size: 12px;
 	font-weight: 600;
