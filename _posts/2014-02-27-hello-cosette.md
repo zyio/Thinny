@@ -30,9 +30,9 @@ To start, you need to change at least the variable `url` on the file.
 To add a social link you just need to add the following code inside the variable `social`:
 
 ~~~
-  - icon:	[the genericon name for the social network]
-    url:	[the url to follow]
-    desc:	[a small description for the link (e.g. "Follow me on twitter")]
+  - icon:   [the genericon name for the social network]
+    url:    [the url to follow]
+    desc:   [a small description for the link (e.g. "Follow me on twitter")]
 ~~~
 
 #### Menu
@@ -40,8 +40,8 @@ To add a social link you just need to add the following code inside the variable
 To add a menu item you just need to add the following code inside the variable `menu`:
 
 ~~~
-  - title:	[title of the menu item]
-    url:	[the url to follow]
+  - title:  [title of the menu item]
+    url:    [the url to follow]
 ~~~
 
 #### Others
@@ -73,10 +73,10 @@ Here is a table with all Thinny's versions:
 |----
 | Version | Codename | Platform | Release date
 |:-:|:-:|:-:|:-:
-| [0.3](https://github.com/camporez/Thinny/releases/tag/v0.3-alexandra) | [Alexandra](http://nikita2010.wikia.com/wiki/Alexandra_Udinov) | Ghost 0.3.x |November 2013 
+| [0.3](https://github.com/camporez/Thinny/releases/tag/v0.3-alexandra) | [Alexandra](http://nikita2010.wikia.com/wiki/Alexandra_Udinov) | Ghost 0.3.x |November 2013
 | [2.0](https://github.com/camporez/Thinny/releases/tag/v2.0-bianca) | [Bianca](http://memoriaglobo.globo.com/programas/entretenimento/novelas/caras-bocas/caras-bocas-bianca-isabelle-drummond.htm) | Jekyll | January 2014 |
-| [2.1](https://github.com/camporez/Thinny/releases/tag/v2.1-cosette) | [Cosette](http://lesmiserables.wikia.com/wiki/Cosette) | Jekyll | February 2014 
-| 2.2 | [Dolores](http://en.wikipedia.org/wiki/Dolores_Haze) | Jekyll | _Soon..._[^2] 
+| [2.1](https://github.com/camporez/Thinny/releases/tag/v2.1-cosette) | [Cosette](http://lesmiserables.wikia.com/wiki/Cosette) | Jekyll | February 2014
+| 2.2 | [Dolores](http://en.wikipedia.org/wiki/Dolores_Haze) | Jekyll | _Soon..._[^2]
 |----
 
 ## Download
