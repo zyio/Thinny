@@ -7,7 +7,7 @@
 
 I'm no longer maintaining Thinny, at least not until I've time to work on it again.
 
-If you want to add something, feel free to send a pull request, which I'll see if it's okay and merge. Or you can [report an issue](http://github.com/camporez/camporez.github.io/issues) and pray.
+If you want to add something, feel free to send a pull request, which I'll see if it's okay and merge. Or you can [report an issue](http://github.com/camporez/Thinny/issues) and pray.
 
 ----
 
@@ -32,4 +32,4 @@ A live demo is available [on my personal blog](http://camporez.com/).
 Read the blog post [here](http://camporez.com/blog/thinny-2/).
 
 ##Reporting issues
-You can report an issue or request a feature [here](http://github.com/camporez/camporez.github.io/issues) or on [twitter](http://twitter.com/iancamporez).
+You can report an issue or request a feature [here](http://github.com/camporez/Thinny/issues) or on [twitter](http://twitter.com/iancamporez).
