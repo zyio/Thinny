@@ -24,8 +24,10 @@
 	<link rel="apple-touch-icon" href="{{ site.url }}{{ site.baseurl }}{{ site.icon }}">
 	<link rel="shortcut icon" href="{{ site.url }}{{ site.baseurl }}/assets/images/favicon.ico">
 	<link rel="alternate" type="application/rss+xml" title="RSS" href="{{ site.url }}{{ site.baseurl }}/atom.xml">
+	{% if site.parallax %}
 	<script type="text/javascript" src="{{ site.baseurl }}/assets/js/jquery-2.1.0.min.js"></script>
 	<script type="text/javascript" src="{{ site.baseurl }}/assets/js/jquery.stellar.min.js"></script>
+	{% endif %}
 	{% if site.google_analytics %}
 	<!-- Asynchronous Google Analytics snippet -->
 	<script>
