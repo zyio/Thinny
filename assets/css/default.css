@@ -338,7 +338,7 @@ pre code {
 	color: #555;
 }
 
-.social-links {
+.social {
 	width: auto;
 	top: 20px;
 	right: 20px;
@@ -346,20 +346,20 @@ pre code {
 	z-index: 2;
 }
 
-.social-links a {
+.social a {
 	opacity: 0.75;
 	text-decoration: none;
 	display: inline-block;
 	margin: 0 5px 0 5px;
 	padding: 0;
 }
-.social-links a span {
+.social a span {
 	font-size: 24px;
 	height: 24px;
 	width: 24px;
 }
 
-.social-links a:hover {
+.social a:hover {
 	opacity: 1;
 }
 
@@ -377,12 +377,13 @@ pre code {
 	top: 12px;
 	left: 12px;
 	padding-top: 5px;
-	padding-left: 5px;
+	padding-left: 4px;
+	padding-right: 4px;
 	z-index: 6;
 	transition-duration: .5s;
 }
 
-.menu-content > .social-links-menu {
+.menu-content > .social-menu {
 	display: inline-block;
 	margin-left: 10px;
 }
