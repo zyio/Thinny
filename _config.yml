@@ -24,11 +24,11 @@ cover:            /assets/images/cover.jpg
 
 social:
   - icon:         twitter
-    url:          https://twitter.com/iancamporez
+    url:          https://twitter.com/ianbrunelli
     desc:         Follow me on twitter
 
   - icon:         github
-    url:          https://github.com/camporez
+    url:          https://github.com/ianbrunelli
     desc:         Fork me on github
 
   - icon:         googleplus-alt
