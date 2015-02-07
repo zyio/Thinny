@@ -498,6 +498,10 @@ pre code {
 	text-decoration: none;
 }
 
+.small-footer {
+	height: 60px;
+}
+
 #post-list {
 	font-family: Lato, Helvetica, Arial, sans-serif;
 	top: 50px;

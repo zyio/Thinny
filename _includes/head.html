@@ -43,4 +43,31 @@
 	{% endif %}
 	<!-- Theme Color for Chrome on Android Lollipop -->
 	<meta name="theme-color" content="#{% if page.theme_color %}{{ page.theme_color }}{% else %}{{ site.theme_color }}{% endif %}">
+	<style>
+	@media (ya-title-fade:true) and (ya-dock-fade:true) {
+		.menu {
+			top: 44px;
+		}
+
+		.menu-content {
+			top: 79px;
+		}
+
+		.social {
+			padding-top: 32px;
+		}
+
+		footer #post-info {
+			bottom: 132px;
+		}
+
+		.copyright {
+			bottom: 42px;
+		}
+
+		.small-footer {
+			height: 92px;
+		}
+	}
+	</style>
 </head>

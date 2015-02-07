@@ -73,28 +73,3 @@ table {
 	width: 100%;
 }
 
-
-@media (ya-title-fade: true) {
-	.menu {
-		top: 44px;
-	}
-
-	.menu-content {
-		top: 79px;
-	}
-
-	.social {
-		padding-top: 32px;
-	}
-}
-
-@media (ya-dock-fade: true) {
-	footer #post-info {
-		bottom: 132px;
-	}
-
-	.copyright {
-		bottom: 42px;
-	}
-}
-
