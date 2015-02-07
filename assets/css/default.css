@@ -199,7 +199,7 @@ h3 {
 }
 
 #article a {
-	border-bottom: 2px solid #fff;
+	border-bottom: 2px solid rgba(255, 255, 255, 0);
 	-webkit-transition: 0.5s ease;
 	transition: 0.5s ease;
 }
