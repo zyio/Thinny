@@ -3,18 +3,29 @@
 	{% include head.html %}
 	<body>
 		{{ content }}
+		{% if site.parallax %}
 		<script>
-		var width = $(window).width()
-		if ( width > 899 )
-		$( function(){
-			$.stellar({
-				responsive: true,
-			verticalScrolling: true,
-			horizontalOffset: 0,
-			verticalOffset: 0,
-			positionProperty: 'transform',
+			var width = $(window).width()
+			if ( width > 899 )
+			$( function(){
+				$.stellar({
+					responsive: true,
+				verticalScrolling: true,
+				horizontalOffset: 0,
+				verticalOffset: 0,
+				positionProperty: 'transform',
+				});
 			});
-		});
+		</script>
+		{% endif %}
+		<script>
+			$('html').click(function() {
+				$('.menu-trigger').prop('checked', false);
+			});
+
+			$('.menu, .menu-content, .menu-trigger').click(function(event) {
+				event.stopPropagation();
+			});
 		</script>
 	</body>
 </html>
