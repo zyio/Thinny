@@ -11,6 +11,12 @@ header, footer {
 	bottom: 100px;
 }
 
+@media (ya-title-fade:true) and (ya-dock-fade:true) {
+	#post-info {
+		bottom: 132px;
+	}
+}
+
 #post-info h1 {
 	font-weight: bold;
 	font-size: 44px;
@@ -53,6 +59,12 @@ header, footer {
 	padding-left: 20px;
 	padding-right: 20px;
 	position: fixed;
+}
+
+@media (ya-title-fade:true) and (ya-dock-fade:true) {
+	.menu-content {
+		top: 79px;
+	}
 }
 
 .menu-title {

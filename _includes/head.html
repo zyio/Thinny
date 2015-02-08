@@ -15,8 +15,7 @@
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="HandheldFriendly" content="True" />
 	<meta name="MobileOptimized" content="320" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="viewport" content="ya-title=fade,ya-dock=fade" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, ya-title=fade, ya-dock=fade" />
 	<link rel="stylesheet" type="text/css" media="only screen and (min-width: 900px)" href="{{ site.baseurl }}/assets/css/desktop.css" />
 	<link rel="stylesheet" type="text/css" media="only screen and (max-width: 899px)" href="{{ site.baseurl }}/assets/css/mobile.css" />
 	<link href="{{ site.baseurl }}/assets/css/genericons.css" type="text/css" rel="stylesheet" />
@@ -43,31 +42,4 @@
 	{% endif %}
 	<!-- Theme Color for Chrome on Android Lollipop -->
 	<meta name="theme-color" content="#{% if page.theme_color %}{{ page.theme_color }}{% else %}{{ site.theme_color }}{% endif %}">
-	<style>
-	@media (ya-title-fade:true) and (ya-dock-fade:true) {
-		.menu {
-			top: 44px;
-		}
-
-		.menu-content {
-			top: 79px;
-		}
-
-		.social {
-			padding-top: 32px;
-		}
-
-		footer #post-info {
-			bottom: 132px;
-		}
-
-		.copyright {
-			bottom: 42px;
-		}
-
-		.small-footer {
-			height: 92px;
-		}
-	}
-	</style>
 </head>

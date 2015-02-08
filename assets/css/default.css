@@ -346,6 +346,12 @@ pre code {
 	z-index: 2;
 }
 
+@media (ya-title-fade:true) and (ya-dock-fade:true) {
+	.social {
+		padding-top: 32px;
+	}
+}
+
 .social a {
 	opacity: 0.75;
 	text-decoration: none;
@@ -381,6 +387,12 @@ pre code {
 	padding-right: 4px;
 	z-index: 6;
 	transition-duration: .5s;
+}
+
+@media (ya-title-fade:true) and (ya-dock-fade:true) {
+	.menu {
+		top: 44px;
+	}
 }
 
 .menu-content > .social-menu {
@@ -494,12 +506,24 @@ pre code {
 	position: absolute;
 }
 
+@media (ya-title-fade:true) and (ya-dock-fade:true) {
+	.copyright {
+		bottom: 42px;
+	}
+}
+
 .copyright a {
 	text-decoration: none;
 }
 
 .small-footer {
 	height: 60px;
+}
+
+@media (ya-title-fade:true) and (ya-dock-fade:true) {
+	.small-footer {
+		height: 92px;
+	}
 }
 
 #post-list {
