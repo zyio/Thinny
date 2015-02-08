@@ -346,7 +346,7 @@ pre code {
 	z-index: 2;
 }
 
-@media (ya-title-fade:true) and (ya-dock-fade:true) {
+@media (ya-dock-fade: false) {
 	.social {
 		padding-top: 32px;
 	}
@@ -389,7 +389,7 @@ pre code {
 	transition-duration: .5s;
 }
 
-@media (ya-title-fade:true) and (ya-dock-fade:true) {
+@media (ya-title-fade: false) {
 	.menu {
 		top: 44px;
 	}
@@ -506,7 +506,7 @@ pre code {
 	position: absolute;
 }
 
-@media (ya-title-fade:true) and (ya-dock-fade:true) {
+@media (ya-dock-fade: false) {
 	.copyright {
 		bottom: 42px;
 	}
@@ -520,7 +520,7 @@ pre code {
 	height: 60px;
 }
 
-@media (ya-title-fade:true) and (ya-dock-fade:true) {
+@media (ya-dock-fade: false) {
 	.small-footer {
 		height: 92px;
 	}

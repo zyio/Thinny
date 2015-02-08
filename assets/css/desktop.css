@@ -11,8 +11,8 @@ header, footer {
 	bottom: 100px;
 }
 
-@media (ya-title-fade:true) and (ya-dock-fade:true) {
-	#post-info {
+@media (ya-dock-fade: false) {
+	footer #post-info {
 		bottom: 132px;
 	}
 }
@@ -61,7 +61,7 @@ header, footer {
 	position: fixed;
 }
 
-@media (ya-title-fade:true) and (ya-dock-fade:true) {
+@media (ya-title-fade: false) {
 	.menu-content {
 		top: 79px;
 	}
