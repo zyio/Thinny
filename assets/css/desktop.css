@@ -11,12 +11,6 @@ header, footer {
 	bottom: 100px;
 }
 
-@media (ya-dock-fade: false) {
-	footer #post-info {
-		bottom: 132px;
-	}
-}
-
 #post-info h1 {
 	font-weight: bold;
 	font-size: 44px;
@@ -52,19 +46,13 @@ header, footer {
 
 .menu-content {
 	width: 125px;
-	top: 47px;
-	left: 12px;
+	top: 50px;
+	left: 14px;
 	padding-top: 5px;
 	padding-bottom: 2px;
 	padding-left: 20px;
 	padding-right: 20px;
 	position: fixed;
-}
-
-@media (ya-title-fade: false) {
-	.menu-content {
-		top: 79px;
-	}
 }
 
 .menu-title {
@@ -83,5 +71,18 @@ header, footer {
 
 table {
 	width: 100%;
+}
+
+
+
+@media (ya-title-fade: true),
+       (ya-title-fade: false) {
+	#post-info {
+		bottom: 132px;
+	}
+
+	.menu-content {
+		top: 82px;
+	}
 }
 

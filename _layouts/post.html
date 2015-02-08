@@ -24,7 +24,7 @@ article: true
 		<a href="{{ page.image.source }}" target="_blank" title="{% if page.video %}Video{% else %}Image{% endif %} Source"><span class="genericon genericon-link"></span></a>
 	</div>
 	{% endif %}
-	<div id="nav-icon" style="bottom: 30px;" data-stellar-ratio="4">
+	<div id="nav-icon" class="nav-icon-top" data-stellar-ratio="4">
 		<a class="scroll" data-speed="500" href="#article"><span class="genericon genericon-expand"></span></a>
 	</div>
 </header>
@@ -56,7 +56,7 @@ article: true
 	{% endfor %}
 {% endif %}
 <footer class="{{ footer_style }}" style="background-image: url({% if footer_image %}{{ footer_image }}{% else %}{{ site.cover }}{% endif %}); height: 75%; min-height: 500px; {% if site.parallax != true %}background-attachment: scroll;{% endif %}" data-stellar-background-ratio="0.5" data-stellar-horizontal-offset="50" data-stellar-vertical-offset="50">
-	<div id="nav-icon" style="top: 60px;" data-stellar-ratio="0.8">
+	<div id="nav-icon" class="nav-icon-bottom" data-stellar-ratio="0.8">
 		<a class="scroll" data-speed="500" href="#article"><span class="genericon genericon-collapse"></span></a>
 	</div>
 	<div id="post-info" data-stellar-ratio="0.5" data-stellar-vertical-offset="120">
