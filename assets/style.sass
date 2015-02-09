@@ -66,7 +66,9 @@ applet,
 object,
 iframe,
 caption,
-p
+p,
+ul,
+li
 	margin: 0 0 0 0
 	border: 0 0 0 0
 	font: inherit
@@ -408,7 +410,7 @@ footer
 		max-width: 200px
 		top: $menu-size + 20px
 		left: $menu-margin
-		padding: 15px 20px 2px 20px
+		padding: 15px 20px 15px 20px
 		position: fixed
 
 		@media #{$ya-title}
@@ -446,8 +448,18 @@ footer
 		border-bottom: 0
 
 	.social-menu
-		display: inline-block
-		margin-left: 10px
+		@media #{$desktop}
+			display: none
+		@media #{$mobile}
+			display: inline-block
+			margin: 0 5px
+
+	.share-menu
+		@media #{$desktop}
+			display: inline-block
+			margin: 0 5px
+		@media #{$mobile}
+			display: none
 
 .menu-title
 	@media #{$desktop}
@@ -458,10 +470,26 @@ footer
 		color: #b5b5b5
 		font-family: $sans-serif
 		font-size: 14px
+		text-transform: uppercase
+
+.share-title
+	@media #{$mobile}
+		display: none
+
+	@media #{$desktop}
+		margin: 20px auto 20px auto
+		color: gray
+		text-transform: uppercase
+		-webkit-font-smoothing: antialiased
+		font-smoothing: antialiased
+		letter-spacing: 1.2pt
+		font-size: 12px
+		font-weight: 600
+		font-style: normal
 
 /* Middle content */
 
-#middle
+.middle
 	width: 100%
 	padding-bottom: 50px
 	background-color: #ffffff
