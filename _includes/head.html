@@ -15,6 +15,7 @@
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="HandheldFriendly" content="True" />
 	<meta name="MobileOptimized" content="320" />
+	<meta name="theme-color" content="#{% if page.color %}{{ page.color }}{% else %}{{ site.color }}{% endif %}">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, ya-title=fade, ya-dock=fade" />
 	<link rel="stylesheet" type="text/css" media="screen" href="{{ site.baseurl }}/assets/style.css" />
 	<link href="{{ site.baseurl }}/assets/css/genericons.css" type="text/css" rel="stylesheet" />
@@ -23,6 +24,19 @@
 	<link rel="apple-touch-icon" href="{{ site.url }}{{ site.baseurl }}{{ site.icon }}">
 	<link rel="shortcut icon" href="{{ site.url }}{{ site.baseurl }}/assets/images/favicon.ico">
 	<link rel="alternate" type="application/rss+xml" title="RSS" href="{{ site.url }}{{ site.baseurl }}/atom.xml">
+	{% if page.color %}
+	<style>
+		a,
+		.pagination .older-posts:hover,
+		.pagination .newer-posts:hover {
+			color: #{{ page.color }};
+		}
+
+		#article a:hover {
+			border-bottom: 2px solid #{{ page.color }};
+		}
+	</style>
+	{% endif %}
 	<script type="text/javascript" src="{{ site.baseurl }}/assets/js/jquery-2.1.0.min.js"></script>
 	{% if site.parallax %}
 	<script type="text/javascript" src="{{ site.baseurl }}/assets/js/jquery.stellar.min.js"></script>
@@ -39,6 +53,4 @@
 		ga('send', 'pageview');
 	</script>
 	{% endif %}
-	<!-- Theme Color for Chrome on Android Lollipop -->
-	<meta name="theme-color" content="#{% if page.theme_color %}{{ page.theme_color }}{% else %}{{ site.theme_color }}{% endif %}">
 </head>
