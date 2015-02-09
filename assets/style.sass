@@ -5,7 +5,7 @@
 
 // Fonts
 $serif:         Fenix, Georgia, "Times New Roman", serif
-$sans:          Lato, Helvetica, Arial, sans-serif
+$sans-serif:    Lato, Helvetica, Arial, sans-serif
 $monospace:     Menlo, Monaco, "Courier New", monospace
 
 // Colors
@@ -14,7 +14,7 @@ $dark-color:    #555555
 $clean-bgcolor: #888888
 $dark-bgcolor:  #555555
 $menu-color:    #1a1a1a
-$blue:          #2a7ead
+$highlight:     #{{ site.color }}
 
 // Sizes and dimensions
 $width-desktop: 700px
@@ -29,8 +29,8 @@ $margin-title:  32px
 $margin-dock:   32px
 
 // Media queries
-$mobile:        "only screen and (max-width: 899px)"
 $desktop:       "only screen and (min-width: 900px)"
+$mobile:        "only screen and (max-width: 899px)"
 $ya-title:      "(ya-title-fade: true), (ya-title-fade: false)"
 $ya-dock:       "(ya-dock-fade: true), (ya-dock-fade: false)"
 
@@ -82,12 +82,11 @@ body
 /* Texts */
 
 p
-	margin-top: 10px
-	margin-bottom: 10px
+	margin: 0
 	color: #515151
 
 a
-	color: $blue
+	color: $highlight
 	text-decoration: none
 
 h1
@@ -136,7 +135,7 @@ footer
 	background-repeat: no-repeat
 	background-position: top
 	background-size: cover
-	font-family: $sans
+	font-family: $sans-serif
 	position: relative
 
 	@media #{$desktop}
@@ -232,7 +231,7 @@ header
 			display: none
 
 		a
-			margin: 0 5px 0 5px
+			margin: 0 5px
 			padding: 0
 			opacity: 0.75
 			text-decoration: none
@@ -250,8 +249,8 @@ header
 		+size(auto, auto)
 		min-width: 100%
 		min-height: 100%
-		right: 0px
-		bottom: 0px
+		right: 0
+		bottom: 0
 		z-index: 0
 		overflow: hidden
 		position: absolute
@@ -308,10 +307,10 @@ footer
 		width: $width-mobile
 		bottom: 100px
 		left: 5%
-		margin-left: 0px
+		margin-left: 0
 
 	h1
-		margin: 15px 0px
+		margin: 15px 0
 		font-weight: bold
 
 		@media #{$desktop}
@@ -325,7 +324,7 @@ footer
 			line-height: 30px
 
 	h2
-		margin: 15px 0px
+		margin: 15px 0
 		opacity: 0.75
 		font-style: italic
 		font-size: 24px
@@ -367,12 +366,11 @@ footer
 
 	span
 		+size(20px, 20px)
-		margin-top: 5px
-		margin-left: 5px
+		margin: 5px
 		color: $clean-color
-		text-shadow: 0px 0px 2px $menu-color
 		font-size: 16px
-		opacity: 1
+		text-shadow: 0 0 2px $menu-color
+		+transition(all, 0.5s, ease, 0s)
 
 	a:hover
 		opacity: 0.75
@@ -387,21 +385,28 @@ footer
 		display: block
 
 @media #{$desktop}
-	.menu:hover,
+	.menu:hover
+		background-color: transparentize($menu-color, 0.60)
+
+		span
+			text-shadow: 0 0 2px transparent
+
 	.menu:active
 		background-color: $menu-color
 
 .menu-content
-	font-family: $sans
+	font-family: $sans-serif
 	background-color: $menu-color
 	text-align: center
 	z-index: 5
 
 	@media #{$desktop}
-		width: 125px
+		width: auto
+		min-width: 125px
+		max-width: 200px
 		top: $menu-size + 20px
 		left: $menu-margin
-		padding: 5px 20px 2px 20px
+		padding: 15px 20px 2px 20px
 		position: fixed
 
 		@media #{$ya-title}
@@ -409,14 +414,14 @@ footer
 
 	@media #{$mobile}
 		width: 100%
-		top: 0px
-		left: 0px
+		top: 0
+		left: 0
 		padding-top: $menu-margin
 		display: block
 		position: relative
 
 		@media #{$ya-title}
-			padding-top: 46px
+			padding-top: $menu-margin + $margin-title
 
 	a
 		color: gray
@@ -436,7 +441,7 @@ footer
 	hr
 		margin: 15px 0
 		border-top: 1px solid #838383
-		border-bottom: 0px
+		border-bottom: 0
 
 	.social-menu
 		display: inline-block
@@ -447,8 +452,9 @@ footer
 		display: none
 
 	@media #{$mobile}
+		margin: $menu-margin - 6px auto
 		color: #b5b5b5
-		font-family: $sans
+		font-family: $sans-serif
 		font-size: 14px
 
 /* Middle content */
@@ -471,39 +477,38 @@ footer
 
 	@media #{$mobile}
 		width: $width-mobile
-		padding: 0px 5%
-		left: 0px
-		margin-left: 0px
+		padding: 0 5%
+		left: 0
+		margin-left: 0
 
 
 #post-list
-	font-family: $sans
+	font-family: $sans-serif
 	top: 50px
 	padding-bottom: 80px
 	font-weight: 400
-	letter-spacing: 0px
+	letter-spacing: 0
 	font-size: 20pt
 	color: #313131
 	line-height: 1.5
 	position: relative
 
 	h1
-		margin-top: 0px
-		margin-bottom: 8px
+		margin: 0 inherit 8px inherit
 		font-weight: bold
 		font-size: 30pt
 		line-height: 44px
 
 	a
-		color: #555
+		color: #555555
 		text-decoration: none
 		+transition(all, 0.5s, ease, 0s)
 
 	a:hover
-		color: $blue
+		color: $highlight
 
 .post-description
-	color: #777
+	color: #777777
 	font-family: $serif
 	font-size: 15pt
 
@@ -514,7 +519,7 @@ footer
 .pagination
 	margin-top: 30px
 	color: #888888
-	font-family: $sans
+	font-family: $sans-serif
 	font-size: 14px
 	font-weight: 300
 	text-align: center
@@ -541,7 +546,7 @@ footer
 
 	.older-posts:hover,
 	.newer-posts:hover
-		color: $blue
+		color: $highlight
 
 	@media #{$mobile}
 		.older-posts:after
@@ -569,7 +574,7 @@ footer
 #comments
 	font-family: $serif
 	font-weight: 400
-	letter-spacing: 0px
+	letter-spacing: 0
 	font-size: 20px
 	color: #313131
 	line-height: 1.5
@@ -579,12 +584,12 @@ footer
 		width: $width-desktop
 		left: 50%
 		margin-left: $width-desktop / 2 * -1
-		padding: 50px 0px
+		padding: 50px 0
 
 	@media #{$mobile}
 		width: $width-mobile
-		left: 0px
-		margin-left: 0px
+		left: 0
+		margin-left: 0
 		padding: 50px 5%
 
 #article
@@ -593,7 +598,7 @@ footer
 		+transition(all, 0.5s, ease, 0s)
 
 	a:hover
-		border-bottom: 2px solid $blue
+		border-bottom: 2px solid $highlight
 
 	img,
 	video
@@ -603,7 +608,7 @@ footer
 	blockquote,
 	pre,
 	.message
-		margin: inherit 0px 30px -20px
+		margin: 10px 0 30px -20px
 		padding: 10px 18px
 		color: #7a7a7a
 
@@ -611,12 +616,12 @@ footer
 		border-left: 10px solid #c7f66a
 
 		p
-			margin: 0px inherit 0px inherit
+			margin: 0
 
 	.article-img
 		a,
 		a:hover
-			border-bottom: 0px
+			border-bottom: 0
 
 		blockquote
 			border-left: 10px solid #d5d5d5
@@ -637,16 +642,15 @@ footer
 
 		.highlight
 			margin-bottom: 1rem
-			border-radius: 4px
+			+border-radius(4px)
 
 		.highlight
 			pre
 				margin-bottom: 0
 
 	pre
-		font-size: .8rem
+		font-size: 0.8rem
 		line-height: 1.4
-		white-space: pre
 		white-space: pre-wrap
 		word-break: break-all
 		word-wrap: break-word
@@ -660,7 +664,7 @@ footer
 			background-color: transparent
 
 	table
-		border: 0px
+		border: 0
 		border-collapse: collapse
 
 		@media #{$desktop}
