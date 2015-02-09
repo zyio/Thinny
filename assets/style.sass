@@ -1,0 +1,712 @@
+---
+---
+
+/* Thinny's style */
+
+// Fonts
+$serif:         Fenix, Georgia, "Times New Roman", serif
+$sans:          Lato, Helvetica, Arial, sans-serif
+$monospace:     Menlo, Monaco, "Courier New", monospace
+
+// Colors
+$clean-color:   #eeeeee
+$dark-color:    #555555
+$clean-bgcolor: #888888
+$dark-bgcolor:  #555555
+$blue:          #2a7ead
+
+// Sizes and dimensions
+$width-desktop: 700px
+$width-mobile:  90%
+$small-icon:    28px
+$nav-icon:      50px
+$menu-size:     30px
+$menu-margin:   14px
+$min-header:    350px
+$min-footer:    60px
+$margin-title:  32px
+$margin-dock:   32px
+
+// Media queries
+$mobile:        "only screen and (max-width: 899px)"
+$desktop:       "only screen and (min-width: 900px)"
+$ya-title:      "(ya-title-fade: true), (ya-title-fade: false)"
+$ya-dock:       "(ya-dock-fade: true), (ya-dock-fade: false)"
+
+// Mixins
+=size($width, $height)
+	width: $width
+	height: $height
+
+=border-radius($radius)
+	-webkit-border-radius: $radius
+	-moz-border-radius: $radius
+	-ms-border-radius: $radius
+	border-radius: $radius
+
+=transition($property, $duration, $effect, $delay)
+	-webkit-transition: $property $duration $effect $delay
+	transition: $property $duration $effect $delay
+
+=site-icon($icon-size, $icon-vertical-margin, $icon-opacity)
+	width: $icon-size
+	height: $icon-size
+	background-size: $icon-size
+	margin: $icon-size / 2 * -1 + $icon-vertical-margin 0 0 $icon-size / 2 * -1
+	opacity: $icon-opacity
+
+/* Normalize */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+caption,
+p
+	margin: 0 0 0 0
+	border: 0 0 0 0
+	font: inherit
+	color: inherit
+
+/* Main */
+
+html,
+body
+	+size(100%, 100%)
+	position: relative
+
+/* Texts */
+
+p
+	margin-top: 10px
+	margin-bottom: 10px
+	color: #515151
+
+a
+	color: $blue
+	text-decoration: none
+
+h1
+	margin-top: 30px
+
+	@media #{$desktop}
+		font-size: 36px
+
+	@media #{$mobile}
+		font-size: 32px
+
+h2
+	margin-top: 25px
+
+	@media #{$desktop}
+		font-size: 30px
+
+	@media #{$mobile}
+	font-size: 28px
+
+h3
+	margin-top: 20px
+	font-size: 24px
+
+/* Color schemes */
+
+.clean
+	color: $clean-color
+	background-color: $clean-bgcolor
+
+	a
+		color: $clean-color
+
+.dark
+	color: $dark-color
+	background-color: $dark-bgcolor
+
+	a
+		color: $dark-color
+
+/* Header and Footer */
+
+header,
+footer
+	width: 100%
+	background-repeat: no-repeat
+	background-position: top
+	background-size: cover
+	font-family: $sans
+	position: relative
+
+	@media #{$desktop}
+		background-attachment: fixed
+
+	@media #{$mobile}
+		background-attachment: scroll
+
+	#nav-icon
+		+size(auto, auto)
+		left: 50%
+		margin-left: $nav-icon / 2 * -1
+		text-align: center
+		z-index: 2
+		position: absolute
+
+		a,
+		a span
+			width: $nav-icon
+			text-decoration: none
+			font-size: 48px
+			display: table
+
+	.site-title,
+	.copyright
+		a:hover
+			text-decoration: underline
+
+header
+	#home-title
+		top: 50%
+		left: 50%
+		+border-radius(50%)
+		+transition(all, 0.25s, ease, 0s)
+		background-repeat: no-repeat
+		z-index: 1
+		position: absolute
+
+	#nav-icon
+		bottom: 30px
+
+		@media #{$ya-title}
+			bottom: 30px + $margin-title
+
+	#img-info
+		+size(auto, auto)
+		right: 15px
+		bottom: 15px
+		z-index: 2
+		position: absolute
+
+		@media #{$ya-title}
+			bottom: 15px + $margin-title
+
+		a,
+		span
+			font-size: 26px
+			display: table
+			opacity: 0.75
+
+		a:hover
+			opacity: 1
+
+	.site-icon-home
+		+site-icon(150px, 0, 0.9)
+
+	.site-icon-home:hover
+		+site-icon(160px, 0, 1)
+
+	.site-icon-page
+		+site-icon(100px, -70px, 1)
+
+	.site-icon-small
+		+size($small-icon, $small-icon)
+		margin-right: 10px
+		vertical-align: middle
+		background-size: $small-icon
+		background-repeat: no-repeat
+		+border-radius(50%)
+		display: inline-block
+
+	.social
+		width: auto
+		top: 20px
+		right: 20px
+		z-index: 2
+		position: absolute
+
+		@media #{$ya-title}
+			top: 20px + $margin-title
+
+		@media #{$mobile}
+			display: none
+
+		a
+			margin: 0 5px 0 5px
+			padding: 0
+			opacity: 0.75
+			text-decoration: none
+			display: inline-block
+
+			span
+				+size(24px, 24px)
+				font-size: 24px
+
+		a:hover
+			opacity: 1
+
+#bg-video
+	@media #{$desktop}
+		+size(auto, auto)
+		min-width: 100%
+		min-height: 100%
+		right: 0px
+		bottom: 0px
+		z-index: 0
+		overflow: hidden
+		position: absolute
+
+	@media #{$mobile}
+		display: none
+
+footer
+	#nav-icon
+		top: 60px
+
+	.copyright
+		color: inherit
+		font-size: 14px
+		text-transform: uppercase
+		bottom: 10px
+		position: absolute
+
+		@media #{$ya-dock}
+			bottom: 10px + $margin-dock
+
+		@media #{$desktop}
+			right: 20px
+
+		@media #{$mobile}
+			width: 100%
+			text-align: center
+			float: left
+
+.page-header
+	height: $min-header
+
+.page-footer
+	height: $min-footer
+
+	@media #{$ya-dock}
+		height: $min-footer + $margin-dock
+
+#post-info
+	font-size: 14px
+	z-index: 2
+	position: absolute
+
+	@media #{$desktop}
+		width: $width-desktop
+		bottom: 100px
+		left: 50%
+		margin-left: $width-desktop / 2 * -1
+
+		@media #{$ya-title}
+			bottom: 100px + $margin-title
+
+	@media #{$mobile}
+		width: $width-mobile
+		bottom: 100px
+		left: 5%
+		margin-left: 0px
+
+	h1
+		font-weight: bold
+		margin: 15px 0px
+
+		@media #{$desktop}
+			font-weight: bold
+			font-size: 44px
+			line-height: 44px
+
+		@media #{$mobile}
+			font-weight: bold
+			font-size: 30px
+			line-height: 30px
+
+	h2
+		opacity: 0.75
+		font-style: italic
+		font-size: 24px
+		line-height: 24px
+		font-weight: lighter
+		margin: 15px 0px
+
+	h2:before
+		content: "“"
+
+	h2:after
+		content: "”"
+
+	h3
+		text-transform: uppercase
+		font-size: 18px
+		margin-bottom: -10px
+
+/* Menu */
+
+.menu
+	+size($menu-size, $menu-size)
+	top: $menu-margin
+	left: $menu-margin
+	padding: 5px 3px 1px 3px
+	background-color: rgba(26, 26, 26, 0.35)
+	+transition(all, 0.5s, ease, 0s)
+	cursor: pointer
+	z-index: 6
+	display: block
+
+	@media #{$ya-title}
+		top: $menu-margin + 32px
+
+	@media #{$desktop}
+		position: fixed
+
+	@media #{$mobile}
+		position: absolute
+
+	span
+		+size(20px, 20px)
+		margin-top: 5px
+		margin-left: 5px
+		color: $clean-color
+		font-size: 16px
+		opacity: 1
+
+	a:hover
+		opacity: 0.75
+
+	+ input
+		display: none
+
+		+ *
+			display: none
+
+	+ input:checked + *
+		display: block
+
+@media #{$desktop}
+	.menu:hover,
+	.menu:active
+		background-color: #1a1a1a
+
+.menu-content
+	font-family: $sans
+	background-color: rgba(26, 26, 26, 1)
+	text-align: center
+	z-index: 5
+
+	@media #{$desktop}
+		width: 125px
+		top: $menu-size + 20px
+		left: $menu-margin
+		padding: 5px 20px 2px 20px
+		position: fixed
+
+		@media #{$ya-title}
+			top: $menu-size + 20px + $margin-title
+
+	@media #{$mobile}
+		width: 100%
+		top: 0px
+		left: 0px
+		padding-top: $menu-margin
+		display: block
+		position: relative
+
+		@media #{$ya-title}
+			padding-top: 46px
+
+	a
+		color: gray
+		text-transform: uppercase
+		-webkit-font-smoothing: antialiased
+		font-smoothing: antialiased
+		letter-spacing: 1.2pt
+		font-size: 12px
+		font-weight: 600
+		font-style: normal
+		line-height: 35px
+		display: block
+
+	a:hover
+		color: #ffffff
+
+	hr
+		margin: 15px 0
+		border-top: 1px solid rgb(131, 131, 131)
+		border-bottom: 0px
+
+	.social-menu
+		display: inline-block
+		margin-left: 10px
+
+.menu-title
+	@media #{$desktop}
+		display: none
+
+	@media #{$mobile}
+		color: #b5b5b5
+		font-family: $sans
+		font-size: 14px
+
+/* Middle content */
+
+#middle
+	width: 100%
+	padding-bottom: 50px
+	background-color: #ffffff
+	z-index: 3
+	position: relative
+
+/* Index page */
+
+#post-list,
+.pagination
+	@media #{$desktop}
+		width: $width-desktop
+		left: 50%
+		margin-left: $width-desktop / 2 * -1
+
+	@media #{$mobile}
+		width: $width-mobile
+		padding: 0px 5%
+		left: 0px
+		margin-left: 0px
+
+
+#post-list
+	font-family: $sans
+	top: 50px
+	padding-bottom: 80px
+	font-weight: 400
+	letter-spacing: 0px
+	font-size: 20pt
+	color: #313131
+	line-height: 1.5
+	position: relative
+
+	h1
+		font-weight: bold
+		font-size: 30pt
+		line-height: 44px
+		margin-top: 0px
+		margin-bottom: 8px
+
+	a
+		color: #555
+		text-decoration: none
+		+transition(all, 0.5s, ease, 0s)
+
+	a:hover
+		color: $blue
+
+.post-description
+	color: #777
+	font-family: $serif
+	font-size: 15pt
+
+.post-date
+	color: #999999
+	font-size: 12pt
+
+.pagination
+	margin-top: 30px
+	color: #888888
+	font-family: $sans
+	font-size: 14px
+	font-weight: 300
+	text-align: center
+	text-transform: uppercase
+	text-decoration: none
+	letter-spacing: 1px
+	position: relative
+
+	@media #{$mobile}
+		padding-top: 30px
+
+	a
+		text-decoration: none
+		color: #888888
+
+	.older-posts,
+	.newer-posts
+		padding: 0 15px
+		position: absolute
+
+		@media #{$mobile}
+			visibility: hidden
+			margin: -5px 5%
+
+	.older-posts:hover,
+	.newer-posts:hover
+		color: $blue
+
+	@media #{$mobile}
+		.older-posts:after
+			visibility: visible
+			font-size: 22px
+			content: "→"
+
+		.newer-posts:before
+			visibility: visible
+			font-size: 22px
+			content: "←"
+
+	.older-posts
+		right: -15px
+
+	.newer-posts
+		left: -15px
+
+	.page-number
+		padding: 2px 0
+
+/* Article and comments */
+
+#article,
+#comments
+	font-family: $serif
+	font-weight: 400
+	letter-spacing: 0px
+	font-size: 20px
+	color: #313131
+	line-height: 1.5
+	position: relative
+
+	@media #{$desktop}
+		width: $width-desktop
+		left: 50%
+		margin-left: $width-desktop / 2 * -1
+		padding: 50px 0px
+
+	@media #{$mobile}
+		width: $width-mobile
+		padding: 50px 5%
+		left: 0px
+		margin-left: 0px
+
+#article
+	a
+		border-bottom: 2px solid transparent
+		+transition(all, 0.5s, ease, 0s)
+
+	a:hover
+		border-bottom: 2px solid $blue
+
+	img,
+	video
+		+border-radius(3px)
+		max-width: 100%
+
+	blockquote,
+	pre,
+	.message
+		padding: 10px 18px
+		margin: 0px 0px 30px -20px
+		margin-top: inherit
+		color: #7a7a7a
+
+	blockquote
+		border-left: 10px solid #c7f66a
+
+		p
+			margin-top: 0px
+			margin-bottom: 0px
+
+	.article-img
+		a,
+		a:hover
+			border-bottom: 0px
+
+		blockquote
+			border-left: 10px solid #d5d5d5
+
+	.message
+		border-left: 10px solid #f66a81
+
+	code,
+	pre
+		font-family: $monospace
+		background-color: #f9f9f9
+
+	code
+		padding: 0.25em 0.5em
+		font-size: 85%
+		color: #bf616a
+		+border-radius(3px)
+
+		.highlight
+			margin-bottom: 1rem
+			border-radius: 4px
+
+		.highlight
+			pre
+				margin-bottom: 0
+
+	pre
+		display: block
+		font-size: .8rem
+		line-height: 1.4
+		white-space: pre
+		white-space: pre-wrap
+		word-break: break-all
+		word-wrap: break-word
+		border-left: 10px solid #f6df6a
+		display: block
+
+		code
+			padding: 0
+			font-size: 100%
+			color: inherit
+			background-color: transparent
+
+	table
+		border: 0px
+		border-collapse: collapse
+
+		@media #{$desktop}
+			width: 100%
+
+		@media #{$mobile}
+			display: block
+			overflow: auto
+
+	td,
+	th
+		padding: 0.25rem 0.5rem
+		border: 1px solid #e5e5e5
+
+	tbody tr:nth-child(odd) td,
+	tbody tr:nth-child(odd) th
+		background-color: #f9f9f9
+
+	dt
+		font-weight: bold
+
+	dd
+		margin-left: 8px
+
+	hr
+		margin: 1.5rem 0
+		border: 0
+		border-top: 1px solid $clean-color
+		border-bottom: 1px solid #ffffff
+		position: relative
+
+	abbr
+		color: #555555
+		font-size: 85%
+		font-weight: bold
+		text-transform: uppercase
+
+	abbr[title]
+		cursor: help
+		border-bottom: 1px dotted #e5e5e5
+
+.footnotes
+	margin-top: 60px
+	border-top: 1px solid $clean-color
+
+#comments
+	text-align: center
+
