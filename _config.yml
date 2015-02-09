@@ -57,5 +57,9 @@ parallax:         false
 # Google Analytics (add the UA Code, e.g.: UA-xxxxxxxx-1)
 google_analytics:  
 
+# Sass settings
+sass:
+  style:           :compressed
+
 # Default Theme Color for Chrome on Android Lollipop (Use hexadecimal ColorCode without `#`)
 theme_color:       5b3a69
