@@ -3,7 +3,7 @@ layout: default
 article: true
 ---
 
-<header class="{% if page.dark %}dark{% else %}clean{% endif %}" style="background-image: url({% if page.image.url %}{{ page.image.url }}{% else %}{{ site.cover }}{% endif %}); height: 100%; {% if site.parallax != true %}background-attachment: scroll;{% endif %}" data-stellar-background-ratio="0.5" data-stellar-horizontal-offset="50">
+<header class="{% if page.dark %}dark{% else %}clean{% endif %} post-header" style="{% if page.color %}background-color: #{{ page.color }};{% endif %}{% if page.image.url %}background-image: url({{ page.image.url }}){% elsif page.color == null %}background-image: url({{ site.cover }}){% endif %}" data-stellar-background-ratio="0.5" data-stellar-horizontal-offset="50">
 	{% if page.video %}
 		<video id="bg-video" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0" data-stellar-ratio="0.5">
 		{% for format in page.video %}
@@ -40,6 +40,7 @@ article: true
 </div>
 {% if page.next %}
 	{% capture footer_style %}{% if page.next.dark %}dark{% else %}clean{% endif %}{% endcapture %}
+	{% capture footer_color %}{% if page.next.color %}{{ page.next.color }}{% endif %}{% endcapture %}
 	{% capture footer_image %}{% if page.next.image.url %}{{ site.baseurl }}{{ page.next.image.url }}{% else %}{{ site.cover }}{% endif %}{% endcapture %}
 	{% capture footer_message %}Read next{% endcapture %}
 	{% capture footer_url %}{{ site.baseurl }}{{ page.next.url }}{% endcapture %}
@@ -48,6 +49,7 @@ article: true
 {% else %}
 	{% for post in site.related_posts limit:1 %}
 		{% capture footer_style %}{% if post.dark %}dark{% else %}clean{% endif %}{% endcapture %}
+		{% capture footer_color %}{% if post.color %}{{ post.color }}{% endif %}{% endcapture %}
 		{% capture footer_image %}{% if post.image.url %}{{ site.baseurl }}{{ post.image.url }}{% else %}{{ site.cover }}{% endif %}{% endcapture %}
 		{% capture footer_message %}Featured post{% endcapture %}
 		{% capture footer_url %}{{ site.baseurl }}{{ post.url }}{% endcapture %}
@@ -58,7 +60,7 @@ article: true
 {% unless footer_style %}
 	{% capture footer_style %}{% if page.dark %}dark{% else %}clean{% endif %}{% endcapture %}
 {% endunless %}
-<footer class="{{ footer_style }}" style="background-image: url({% if footer_image %}{{ footer_image }}{% else %}{{ site.cover }}{% endif %}); height: 75%; min-height: 500px; {% if site.parallax != true %}background-attachment: scroll;{% endif %}" data-stellar-background-ratio="0.5" data-stellar-horizontal-offset="50" data-stellar-vertical-offset="50">
+<footer class="{{ footer_style }} post-footer" style="{% if footer_color %}background-color: #{{ footer_color }};{% endif %}{% if footer_image %}background-image: url({{ footer_image }}){% elsif footer_color != '' %}background-image: url({{ site.cover }}){% endif %}" data-stellar-background-ratio="0.5" data-stellar-horizontal-offset="50" data-stellar-vertical-offset="50">
 	<div class="nav-icon" data-stellar-ratio="0.8">
 		<a class="scroll" data-speed="500" href="#article"><span class="genericon genericon-collapse"></span></a>
 	</div>

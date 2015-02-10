@@ -324,6 +324,15 @@ footer
 	@media #{$ya-dock}
 		height: $min-footer + $margin-dock
 
+.post-header
+	height: 100%
+	{% if site.parallax != true %}background-attachment: scroll{% endif %}
+
+.post-footer
+	height: 75%
+	min-height: 500px
+	{% if site.parallax != true %}background-attachment: scroll{% endif %}
+
 .post-info
 	font-size: 14px
 	z-index: 2
