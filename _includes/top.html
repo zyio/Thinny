@@ -23,6 +23,7 @@
 </label>
 <input id="share-trigger" class="share-trigger" type="checkbox">
 <div class="share-content">
+	<span class="genericon genericon-rightarrow arrow"></span>
 {% capture canonical %}{{ site.url }}{{ site.baseurl }}{% if site.permalink contains '.html' %}{{ page.url }}{% elsif site.permalink contains category_dir %}{{ '/' | page.url | remove:'index.html' | '/' }}{% else %}{{ page.url | remove:'index.html' | '/' }}{% endif %}{% endcapture %}
 	<a href="https://www.facebook.com/sharer/sharer.php?u={{ canonical }}" class="share-menu" target="_blank" title="Post on Facebook"><span class="genericon genericon-facebook-alt"></span><span>Post</span></a>
 	<br>
