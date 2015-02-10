@@ -66,7 +66,7 @@ If you choose Disqus, you'll need to set your username inside the variable `disq
 
 ## Page variables
 
-The page variables are set on the beginning of every post or page. Some of then are required, but other are optional.
+The page variables are set on the beginning of every post or page. Some of then are required, but others are optional.
 
 ### Title and quote
 
