@@ -396,6 +396,7 @@ footer
 .menu
 	cursor: pointer
 	z-index: 6
+	transition: opacity 0.5s linear
 	@media #{$mobile}
 		+size($menu-size, $menu-size)
 		top: $menu-margin
@@ -414,25 +415,27 @@ footer
 			margin: 5px
 			color: $clean-color
 			font-size: 16px
-			text-shadow: 0 0 2px $menu-color
+			text-shadow: 0 0 1px $menu-color
 			+transition(all, 0.5s, ease, 0s)
 
-		a:hover
-			opacity: 0.75
-
 	+ input
-		display: none
+		opacity: 0
+		visibility: hidden
 
 		+ *
-			display: none
+			opacity: 0
+			visibility: hidden
+			+transition(all, 0.25s, linear, 0s)
 
 	+ input:checked + *
-		display: block
+		opacity: 1
+		visibility: visible
+		+transition(opacity, 0.25s, linear, 0s)
 
 .menu-content
 	@media #{$mobile}
 		width: 100%
-		top: 0
+		top: -18px
 		left: 0
 		padding-top: $menu-margin + 5px
 		font-family: $sans-serif
