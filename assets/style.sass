@@ -79,6 +79,7 @@ li
 html,
 body
 	+size(100%, 100%)
+	max-width: 100%
 	position: relative
 
 /* Texts */
@@ -653,6 +654,7 @@ label.dropdown-menu,
 	font-size: 20px
 	color: #313131
 	line-height: 1.5
+	overflow: auto
 	position: relative
 
 	@media #{$desktop}
@@ -663,6 +665,7 @@ label.dropdown-menu,
 
 	@media #{$mobile}
 		width: $width-mobile
+		max-width: $width-mobile
 		left: 0
 		margin-left: 0
 		padding: 50px 5%
