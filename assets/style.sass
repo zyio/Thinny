@@ -392,7 +392,7 @@ footer
 	text-align: center
 	line-height: 45px
 
-/* Menu */
+/* Menus */
 
 .menu
 	cursor: pointer
@@ -436,7 +436,7 @@ footer
 .menu-content
 	@media #{$mobile}
 		width: 100%
-		top: -18px
+		top: -20px
 		left: 0
 		padding-top: $menu-margin + 5px
 		font-family: $sans-serif
@@ -523,6 +523,18 @@ footer
 		color: transparentize($menu-color, 0.2)
 		display: block
 		position: absolute
+
+	span.share-bg
+		top: -10px
+		right: -67px
+		color: #ffffff
+		font-size: 24px
+		text-shadow: 0 0 1px $menu-color
+		display: block
+		position: fixed
+
+		@media #{$ya-title}
+			top: -10px - $margin-title
 
 label.dropdown-menu,
 .menu-content,

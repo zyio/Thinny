@@ -23,6 +23,7 @@
 </label>
 <input id="share-trigger" class="share-trigger" type="checkbox">
 <div class="share-content">
+	<label class="menu top-icon share" for="share-trigger"><span class="genericon genericon-share share-bg"></span></label>
 	<span class="genericon genericon-rightarrow arrow"></span>
 {% capture canonical %}{{ site.url }}{{ site.baseurl }}{% if site.permalink contains '.html' %}{{ page.url }}{% elsif site.permalink contains category_dir %}{{ '/' | page.url | remove:'index.html' | '/' }}{% else %}{{ page.url | remove:'index.html' | '/' }}{% endif %}{% endcapture %}
 	<a href="https://www.facebook.com/sharer/sharer.php?u={{ canonical }}" class="share-menu" target="_blank" title="Post on Facebook"><span class="genericon genericon-facebook-alt"></span><span>Post</span></a>
@@ -36,16 +37,18 @@
 	<a href="http://www.reddit.com/submit?url={{ canonical }}&title={{ page.title }}" class="share-menu" target="_blank" title="Submit on Reddit"><span class="genericon genericon-reddit"></span><span>Submit</span></a>
 </div>
 
-
 {% else %}
+
 <div class="menu inline-menu top-icon">
 	{% for item in site.menu %}
 		{% if item.title != "Home" %}<a href="{{ item.url }}">{{ item.title }}</a>{% endif %}
 	{% endfor %}
 </div>
+
 <div class="top-icon social">
 	{% for social in site.social %}
 		<a href="{{ social.url }}" target="_blank" title="{{ social.desc }}"><span class="genericon genericon-{{ social.icon }}"></span></a>
 	{% endfor %}
 </div>
+
 {% endif %}
