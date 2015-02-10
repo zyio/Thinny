@@ -9,13 +9,16 @@ video:
    mp4: /media/2015-02-10-a-quick-look-into-thinny-22/lolita.mp4
 color: "df281a"
 comments: false
+dark: false
 ---
 
 After almost a year, I'm releasing Thinny 2.2, with great improvements from the last stable version.
 
 This version includes:
 
-- A redesigned menu, with sharing buttons for desktop;
+- A redesigned menu;
+
+- A new share menu for desktops;
 
 - A rewritten stylesheet, using [Sass](http://sass-lang.com);
 
@@ -47,6 +50,8 @@ menu:
   url:          /portfolio
 ~~~
 
+The "Home" entry isn't displayed on desktops.
+
 ### Social links
 
 The social icons are provided by [Genericons](http://genericons.com/). Each entry has an `icon` (you can see all the icons on [the Genericons website](http://genericons.com/)), a `url` and a description (`desc`).
@@ -74,7 +79,7 @@ The `title` variable sets a title for your post, and it's required.
 
 The `quote` variable is optional. It must be a small (about the size of a tweet) subtitle for your post.
 
-### Page cover
+### Post cover
 
 On the top of your post, a full width and height image or video will be displayed. This image should be related to your post, and if no image/video is set the default cover in `_config.yml` will be used.
 
@@ -102,7 +107,7 @@ All of this is optional.
 
 Each post can use a different color for its links, and if no `color` variable is set the default one in `_config.yml` will be used.
 
-This color will also be used [on Android Lollipop](http://updates.html5rocks.com/2014/11/Support-for-theme-color-in-Chrome-39-for-Android).
+This color will also be used [on Android Lollipop](http://updates.html5rocks.com/2014/11/Support-for-theme-color-in-Chrome-39-for-Android), and has page cover when no image or video is set (if no color, image or video, the default site cover is used).
 
 ~~~
 color: "00b5f5"
@@ -110,12 +115,22 @@ color: "00b5f5"
 
 {% include image.html url="/media/2015-02-10-a-quick-look-into-thinny-22/lollipop.jpg" description="Colorful toolbar on Android Lollipop's Chrome." %}
 
+### Dark color scheme
+
+The default color for the items above the post's cover can be changed for grey. This is useful in case your cover image has a light look, making it hard to read the text.
+
+~~~
+dark: true
+~~~
+
+![Dark theme](/media/2015-02-10-a-quick-look-into-thinny-22/dark.jpg)
+
 ### Comments
 
 Comments can be enabled/disabled per post, all you have to do is set the `comments` variable to `true` or `false`:
 
 ~~~
-comments: true
+comments: false
 ~~~
 
 # Getting Thinny
