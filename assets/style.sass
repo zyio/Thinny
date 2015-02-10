@@ -219,33 +219,66 @@ header
 		+border-radius(50%)
 		display: inline-block
 
-	.social
-		width: auto
-		top: 20px
-		right: 20px
-		z-index: 2
-		position: absolute
+	@media #{$desktop}
+		.top-icon
+			width: auto
+			top: 20px
+			z-index: 4
 
-		@media #{$ya-title}
-			top: 20px + $margin-title
+			@media #{$ya-title}
+				top: 20px + $margin-title
 
-		@media #{$mobile}
-			display: none
+			a
+				margin: 0 5px
+				padding: 0
+				opacity: 0.75
+				text-decoration: none
+				display: inline-block
 
-		a
-			margin: 0 5px
-			padding: 0
-			opacity: 0.75
-			text-decoration: none
-			display: inline-block
+			a:hover
+				opacity: 1
 
 			span
 				+size(24px, 24px)
 				font-size: 24px
+				text-shadow: 0 0 1px $menu-color
 
-		a:hover
-			opacity: 1
+		.inline-menu
+			right: 20px
+			line-height: 24px
+			text-transform: uppercase
+			position: absolute
 
+		.back
+			left: 20px
+			position: absolute
+
+		.share
+			right: 20px
+			-webkit-backface-visibility: hidden
+			-webkit-transform: translateZ(0)
+			position: fixed
+
+			span
+				opacity: 0.75
+
+			span:hover
+				opacity: 1
+
+		.social
+			width: 100%
+			top: $min-header - 44px
+			text-align: center
+			position: relative
+
+	@media #{$mobile}
+		.top-icon,
+		.inline-menu,
+		.back,
+		.social,
+		.share,
+		.share-content
+			display: none
 #bg-video
 	@media #{$desktop}
 		+size(auto, auto)
@@ -344,40 +377,39 @@ footer
 		text-transform: uppercase
 		font-size: 18px
 
+.page-info
+	bottom: 44px
+	text-align: center
+	line-height: 45px
+
 /* Menu */
 
 .menu
-	+size($menu-size, $menu-size)
-	top: $menu-margin
-	left: $menu-margin
-	padding: 5px 3px 1px 3px
-	background-color: transparent
-	+transition(all, 0.5s, ease, 0s)
 	cursor: pointer
 	z-index: 6
-	display: block
-
-	@media #{$ya-title}
-		top: $menu-margin + $margin-title
-
-	@media #{$desktop}
-		-webkit-backface-visibility: hidden
-		-webkit-transform: translateZ(0)
-		position: fixed
-
 	@media #{$mobile}
+		+size($menu-size, $menu-size)
+		top: $menu-margin
+		left: $menu-margin
+		padding: 5px 3px 1px 3px
+		background-color: transparent
+		+transition(all, 0.5s, ease, 0s)
+		display: block
 		position: absolute
 
-	span
-		+size(20px, 20px)
-		margin: 5px
-		color: $clean-color
-		font-size: 16px
-		text-shadow: 0 0 2px $menu-color
-		+transition(all, 0.5s, ease, 0s)
+		@media #{$ya-title}
+			top: $menu-margin + $margin-title
 
-	a:hover
-		opacity: 0.75
+		span
+			+size(20px, 20px)
+			margin: 5px
+			color: $clean-color
+			font-size: 16px
+			text-shadow: 0 0 2px $menu-color
+			+transition(all, 0.5s, ease, 0s)
+
+		a:hover
+			opacity: 0.75
 
 	+ input
 		display: none
@@ -388,44 +420,67 @@ footer
 	+ input:checked + *
 		display: block
 
-@media #{$desktop}
-	.menu:hover
-		background-color: transparentize($menu-color, 0.60)
-
-		span
-			text-shadow: 0 0 2px transparent
-
-	.menu:active
-		background-color: $menu-color
-
 .menu-content
-	font-family: $sans-serif
-	background-color: $menu-color
-	text-align: center
-	z-index: 5
-
-	@media #{$desktop}
-		width: auto
-		min-width: 125px
-		max-width: 200px
-		top: $menu-size + 20px
-		left: $menu-margin
-		padding: 15px 20px 15px 20px
-		position: fixed
-
-		@media #{$ya-title}
-			top: $menu-size + 20px + $margin-title
-
 	@media #{$mobile}
 		width: 100%
 		top: 0
 		left: 0
-		padding-top: $menu-margin
+		padding-top: $menu-margin + 5px
+		font-family: $sans-serif
+		background-color: $menu-color
+		text-align: center
 		display: block
+		z-index: 5
 		position: relative
 
 		@media #{$ya-title}
 			padding-top: $menu-margin + $margin-title
+
+		a
+			color: gray
+			text-transform: uppercase
+			-webkit-font-smoothing: antialiased
+			font-smoothing: antialiased
+			letter-spacing: 1.2pt
+			font-size: 12px
+			font-weight: 600
+			font-style: normal
+			line-height: 35px
+			display: block
+
+		a:hover
+			color: #ffffff
+
+		hr
+			margin: 15px 0
+			border-top: 1px solid #838383
+			border-bottom: 0
+
+		.social-menu
+			display: inline-block
+			margin: 0 5px
+
+@media #{$mobile}
+	.menu-title
+		margin: $menu-margin - 6px auto
+		color: #b5b5b5
+		font-family: $sans-serif
+		font-size: 14px
+		text-transform: uppercase
+
+.share-content
+	width: auto
+	top: 20px
+	right: 50px
+	padding: 20px 20px
+	+border-radius(5px)
+	font-family: $sans-serif
+	background-color: $menu-color
+	text-align: center
+	z-index: 5
+	-webkit-backface-visibility: hidden
+	-webkit-transform: translateZ(0)
+	position: fixed
 
 	a
 		color: gray
@@ -436,56 +491,24 @@ footer
 		font-size: 12px
 		font-weight: 600
 		font-style: normal
-		line-height: 35px
-		display: block
+		line-height: 24px
+		display: inline-block
 
 	a:hover
 		color: #ffffff
 
-	hr
-		margin: 15px 0
-		border-top: 1px solid #838383
-		border-bottom: 0
+	span
+		vertical-align: middle
+		margin: 0 5px
 
-	.social-menu
-		@media #{$desktop}
-			display: none
-		@media #{$mobile}
-			display: inline-block
-			margin: 0 5px
-
-	.share-menu
-		@media #{$desktop}
-			display: inline-block
-			margin: 0 5px
-		@media #{$mobile}
-			display: none
-
-.menu-title
+label.dropdown-menu,
+.menu-content,
+.menu-title,
+.menu-trigger,
+.social-menu
 	@media #{$desktop}
+		visibility: hidden
 		display: none
-
-	@media #{$mobile}
-		margin: $menu-margin - 6px auto
-		color: #b5b5b5
-		font-family: $sans-serif
-		font-size: 14px
-		text-transform: uppercase
-
-.share-title
-	@media #{$mobile}
-		display: none
-
-	@media #{$desktop}
-		margin: 20px auto 20px auto
-		color: gray
-		text-transform: uppercase
-		-webkit-font-smoothing: antialiased
-		font-smoothing: antialiased
-		letter-spacing: 1.2pt
-		font-size: 12px
-		font-weight: 600
-		font-style: normal
 
 /* Middle content */
 

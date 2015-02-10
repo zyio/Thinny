@@ -21,9 +21,10 @@
 		<script>
 			$('html').click(function() {
 				$('.menu-trigger').prop('checked', false);
+				$('.share-trigger').prop('checked', false);
 			});
 
-			$('.menu, .menu-content, .menu-trigger').click(function(event) {
+			$('.menu, .menu-content, .menu-trigger, .share-content, .share-trigger').click(function(event) {
 				event.stopPropagation();
 			});
 		</script>
