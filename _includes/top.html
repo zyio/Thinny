@@ -14,7 +14,7 @@
 </div>
 
 {% if page.article %}
-<div class="top-icon back">
+<div class="top-icon back" data-stellar-ratio="0.1">
 	<a href="{{ site.url }}{{ site.baseurl }}" title="Go back to {{ site.title }}"><span class="genericon genericon-previous"></span></a>
 </div>
 
@@ -39,13 +39,13 @@
 
 {% else %}
 
-<div class="menu inline-menu top-icon">
+<div class="menu inline-menu top-icon" data-stellar-ratio="0.1">
 	{% for item in site.menu %}
 		{% if item.title != "Home" %}<a href="{{ item.url }}">{{ item.title }}</a>{% endif %}
 	{% endfor %}
 </div>
 
-<div class="top-icon social">
+<div class="top-icon social" data-stellar-ratio="0.1">
 	{% for social in site.social %}
 		<a href="{{ social.url }}" target="_blank" title="{{ social.desc }}"><span class="genericon genericon-{{ social.icon }}"></span></a>
 	{% endfor %}
