@@ -37,7 +37,7 @@
 	<a href="http://www.reddit.com/submit?url={{ canonical }}&title={{ page.title }}" class="share-menu" target="_blank" title="Submit on Reddit"><span class="genericon genericon-reddit"></span><span>Submit</span></a>
 </div>
 
-{% else %}
+{% elsif page.topbar != false %}
 
 <div class="menu inline-menu top-icon" data-stellar-ratio="0.1">
 	{% for item in site.menu %}
