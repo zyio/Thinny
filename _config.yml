@@ -39,7 +39,7 @@ social:
     desc:         Add me on google+
 
   - icon:         feed
-    url:          http://camporez.com/atom.xml
+    url:          /feed
     desc:         Subscribe to my feed
 
 menu:
