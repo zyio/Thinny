@@ -17,7 +17,7 @@ article: true
 		{% if page.quote %}
 			<h2>{{ page.quote }}</h2>
 		{% endif %}
-		<a href="{%if site.author.twitter %}https://twitter.com/{{ site.author.twitter }}{% elsif site.author.url %}{{ site.author.url }}{% else %}{{ site.url }}{% endif %}"><div class="site-icon-small" style="background-image: url({%if site.author.twitter %}https://twitter.com/{{ site.author.twitter }}/profile_image?size=normal{% else %}{{ site.icon }}{% endif %});"></div>{{ site.author.name }}</a>, in {{ page.date | date_to_long_string }}
+		<a href="{%if site.author.twitter %}https://twitter.com/{{ site.author.twitter }}{% elsif site.author.url %}{{ site.author.url }}{% else %}{{ site.url }}{% endif %}"><div class="site-icon-small"></div>{{ site.author.name }}</a>, in {{ page.date | date_to_long_string }}
 	</div>
 	{% if page.image.source %}
 	<div id="img-info" data-stellar-ratio="0.5">

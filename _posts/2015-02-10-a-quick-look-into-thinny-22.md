@@ -107,7 +107,7 @@ All of this is optional.
 
 Each post can use a different color for its links, and if no `color` variable is set the default one in `_config.yml` will be used.
 
-This color will also be used [on Android Lollipop](http://updates.html5rocks.com/2014/11/Support-for-theme-color-in-Chrome-39-for-Android), and has page cover when no image or video is set (if no color, image or video, the default site cover is used).
+This color will also be used [on Android Lollipop](http://updates.html5rocks.com/2014/11/Support-for-theme-color-in-Chrome-39-for-Android), and as page cover when no image or video is set (if no color, image or video, the default site cover is used).
 
 ~~~
 color: "00b5f5"

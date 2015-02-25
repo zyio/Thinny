@@ -6,7 +6,7 @@ image:
       url: /media/2014-02-27-hello-cosette/cover.jpg
 video: false
 comments: true
-color: 302f2d
+color: "436661"
 ---
 
 #Thinny 2.1, codename "[Cosette](http://lesmiserables.wikia.com/wiki/Cosette)"
